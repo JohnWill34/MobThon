@@ -1,0 +1,130 @@
+body{
+    margin: 0;                                         
+    display: grid;                                     
+    grid-template-areas: 'navbar navbar navbar navbar'
+                         'header section aside div' 
+                         'footer footer footer footer';
+
+    grid-template-rows: 20vh 20vh 40vh ;          
+
+}
+
+
+/* ------------------------------------- HEADER  ------------------------------------------------ */
+
+nav{                                                   /*  mudando a altura  */
+
+    grid-area: navbar;                                 /*  definindo o vav como navbar  */
+    height: 20vh;                                      /*  mudando a altura  */
+    background-color: rgb(53, 53, 53);               /*  mudando a cor  */
+    display: flex;                                     /*  definindo display flex  */
+    align-items: center;                               /*  definindo alinhamento horizontal  */
+    justify-content: space-around;                     /*  Separando os itens  */
+    
+}
+
+nav a{
+    color: whitesmoke;                                /*  Separando os itens  */
+    font-family: Arial, Helvetica, sans-serif;          /*  Colocar o nome da fonte  */
+
+}
+
+nav img{                                               /*  Definindo a imagem no nav  */
+    cursor: pointer;                                   /*  Quando passar o mouse vira a mÃ£o  */
+    display: none;                                     /*  NÃ£o mostra a imagem  */
+}
+
+@media(max-width: 768px){                              /*  Media Queries com 768px mÃ¡ximo */
+    nav a {
+        display: none;
+    
+    }
+    nav img{                                           /*  Editando imagem da nav  */
+        display: block;
+    }
+}
+
+/* ------------------------------------------ GRID ---------------------------------------------------- */
+
+header{                                                /*  Definindo o header do grid  */
+    grid-area: header;
+    background-color: red;
+}
+section{                                               /*  Definindo a section do grid  */
+    grid-area: section;
+    background-color: blue;
+}
+aside{                                                 /*  Definindo o header do grid  */
+    grid-area: aside;
+    background-color: orange;
+}
+
+div{                                                  /*  Definindo o div do grid  */
+    grid-area: div;
+    background-color: yellowgreen;
+}
+
+footer{                                                /*  Definindo o header do grid  */
+    grid-area: footer;
+    background-color: yellow;
+}
+
+/* ---------------------------------------- MEDIA ----------------------------------------------------- */
+
+@media(max-width: 768px){                             /*  Media Queries  */
+    body{
+        grid-template-areas: 'navbar navbar navbar navbar'
+                             'header header section section'  
+                             'aside aside div div' 
+                             'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 20vh ;                        /*  Aqui precisa acrescentar mais uma linha  */
+        grid-gap: 10px;                                                  /*  EspaÃ§o entre as estrofes  */
+    }
+
+    nav a {
+        display: none;
+    
+    }
+    nav img{
+        display: block;
+    }
+}
+
+@media(max-width: 475px){ 
+    body{
+        grid-template-areas: 'navbar navbar navbar navbar'
+                             'header header header header'  
+                             'section section section section'  
+                             'div div div div '  
+                             'aside aside aside aside' 
+                             'footer footer footer footer';
+        grid-template-rows:20vh 70vh 70vh 70vh 70vh 20vh;                /*  Aqui precisa acrescentar 6 linhas  */
+        grid-gap: 10px;                                                  /*  EspaÃ§o entre as estrofes  */
+    }
+}
+
+/* ---------------------------------------- CLASSE ----------------------------------------------------- */
+
+.takumes{
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    max-width: 90%;
+    padding: 10px;                                                                /*  borda catupiry  */
+}
+
+header,section,aside,div{                                                         /*  tudo com o mesmo  */
+    display: flex;                                                                /*  display ta flex  */
+    align-items: center;                                                         /*  ajusta vertical  */
+    justify-content: center;                                                     /*  ajusta horizontal  */
+    flex-direction: column;                                                      /*  fizemos o flex em clouna, e inverte tudo  */
+
+}
+
+
+.social{
+    display: flex;                                                                
+    align-items: center;                                                         
+    justify-content: space-around;                                                     
+     
+}
