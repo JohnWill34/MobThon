@@ -5,8 +5,13 @@ body{
                          'header section aside div' 
                          'footer footer footer footer';
 
-    grid-template-rows: 20vh 20vh 40vh ;          
+    grid-template-rows: 20vh 20vh 20vh 20vh;          
 
+}
+
+nav{
+    display: flex;
+    align-content: space-around;
 }
 
 
