@@ -5,49 +5,47 @@ body{
                          'header section aside div' 
                          'footer footer footer footer';
 
-    grid-template-rows: 20vh 20vh 20vh 20vh;          
+    grid-template-rows: 20vh 70vh 20vh 20vh;          
 
 }
 
-nav{
-    display: flex;
-    align-content: space-around;
-}
+/* ------------------------------------- NAV  ------------------------------------------------ */
 
-
-/* ------------------------------------- HEADER  ------------------------------------------------ */
-
-nav{                                                   /*  mudando a altura  */
+nav{                                                   
 
     grid-area: navbar;                                 /*  definindo o vav como navbar  */
     height: 20vh;                                      /*  mudando a altura  */
-    background-color: rgb(53, 53, 53);               /*  mudando a cor  */
+    background-color: rgb(255, 255, 255);            /*  mudando a cor  */
     display: flex;                                     /*  definindo display flex  */
     align-items: center;                               /*  definindo alinhamento horizontal  */
     justify-content: space-around;                     /*  Separando os itens  */
     
 }
 
-nav a{
-    color: whitesmoke;                                /*  Separando os itens  */
-    font-family: Arial, Helvetica, sans-serif;          /*  Colocar o nome da fonte  */
-
+ul{
+    display: flex;
+    list-style-type: none; 
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
 }
+
+a{
+    color: black;
+    font-size: 14pt;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder; 
+    cursor: pointer;
+}
+
 
 nav img{                                               /*  Definindo a imagem no nav  */
     cursor: pointer;                                   /*  Quando passar o mouse vira a mÃ£o  */
     display: none;                                     /*  NÃ£o mostra a imagem  */
 }
 
-@media(max-width: 768px){                              /*  Media Queries com 768px mÃ¡ximo */
-    nav a {
-        display: none;
-    
-    }
-    nav img{                                           /*  Editando imagem da nav  */
-        display: block;
-    }
-}
+
 
 /* ------------------------------------------ GRID ---------------------------------------------------- */
 
@@ -127,9 +125,3 @@ header,section,aside,div{                                                       
 }
 
 
-.social{
-    display: flex;                                                                
-    align-items: center;                                                         
-    justify-content: space-around;                                                     
-     
-}
